@@ -4,13 +4,13 @@
 -- analogous 2: https://coolors.co/bfb7e4-8caaee-99d1db-e5c890-85c1dc-a6d189-81c8be
 
 local color_palette = {
-	rosewater = "#8a3ffc",
-	flamingo = "#6929c4",
-	pink = "#be95ff",
-	mauve = "#fa4d56",
-	red = "#0f62fe",
-	maroon = "#fa4d56",
-	peach = "#ffb3b8",
+	rosewater = "#fff1f1",
+	flamingo = "#ffb3b8",
+	pink = "#fa4d56",
+	mauve = "#8a3ffc",
+	red = "#da1e28",
+	maroon = "#a2191f",
+	peach = "#ff832b",
 	yellow = "#f1c21b",
 	green = "#08bdba",
 	teal = "#9ef0f0",
