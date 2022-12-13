@@ -1,4 +1,4 @@
--- NOTE: references for Catppuccin Mocha
+-- NOTE: references for Catppuccin Carbon
 -- monochromatic: https://coolors.co/c6d0f5-aeb7d9-969dbc-7e84a0-666a83-4e5167-36374a-1e1e2e-12121c-07070a
 -- analogous 1: https://coolors.co/f5e0dc-f2cdcd-f5c2e7-cba6f7-eba0ac-f38ba8-fab387
 -- analogous 2: https://coolors.co/bfb7e4-8caaee-99d1db-e5c890-85c1dc-a6d189-81c8be

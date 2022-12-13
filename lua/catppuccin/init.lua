@@ -5,7 +5,7 @@ local M = {
 	options = {
 		background = {
 			light = "latte",
-			dark = "mocha",
+			dark = "carbon",
 		},
 		compile_path = vim.fn.stdpath "cache" .. "/catppuccin",
 		transparent_background = false,
@@ -63,7 +63,7 @@ local M = {
 		color_overrides = {},
 		highlight_overrides = {},
 	},
-	flavours = { latte = 1, frappe = 2, macchiato = 3, mocha = 4 },
+	flavours = { latte = 1, frappe = 2, macchiato = 3, carbon = 4 },
 	path_sep = jit and (jit.os == "Windows" and "\\" or "/") or package.config:sub(1, 1),
 }
 
@@ -82,7 +82,7 @@ function M.load(flavour)
 	if lock then return end
 	M.flavour = flavour
 		or (vim.g.colors_name and M.options.background[is_vim and vim.eval "&background" or vim.o.background] or M.flavour)
-		or "mocha"
+		or "carbon"
 	local compiled_path = M.options.compile_path .. M.path_sep .. M.flavour .. "_compiled.lua"
 	lock = true
 	local f = loadfile(compiled_path)
@@ -100,12 +100,12 @@ function M.setup(user_conf)
 	M.options = vim.tbl_deep_extend("keep", user_conf, M.options)
 	M.options.highlight_overrides.all = user_conf.custom_highlights or M.options.highlight_overrides.all
 
-	M.flavour = M.options.flavour or vim.g.catppuccin_flavour or "mocha"
+	M.flavour = M.options.flavour or vim.g.catppuccin_flavour or "carbon"
 
 	if not M.flavours[M.flavour] then
 		vim.notify(
 			string.format(
-				"Catppuccin (error): Invalid flavour '%s', flavour must be 'latte', 'frappe', 'macchiato' or 'mocha'",
+				"Catppuccin (error): Invalid flavour '%s', flavour must be 'latte', 'frappe', 'macchiato' or 'carbon'",
 				M.flavour
 			),
 			vim.log.levels.ERROR
@@ -144,7 +144,7 @@ vim.api.nvim_create_user_command("Catppuccin", function(inp)
 		vim.notify(
 			"Catppuccin (error): Invalid flavour '"
 				.. inp.args
-				.. "', flavour must be 'latte', 'frappe', 'macchiato' or 'mocha'",
+				.. "', flavour must be 'latte', 'frappe', 'macchiato' or 'carbon'",
 			vim.log.levels.ERROR
 		)
 		return
